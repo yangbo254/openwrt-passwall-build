@@ -56,7 +56,7 @@ jobs:
         run: |
           sdk=${{ matrix.sdk }}
           if [[ $sdk == *"openwrt"* ]]; then
-            # openwrt-22.03 -> releases/packages-22.03
+            # openwrt-18.06 -> releases/packages-18.06
             abi=${sdk/openwrt/releases\/packages}
           else
             # snapshot -> snapshots/packages
@@ -106,7 +106,7 @@ jobs:
         with:
           switches: -avz --delete --exclude-from=archived.txt
           path: dist/
-          remote_path: /storage/groups/o/op/openwrt-passwall-build/
-          remote_host: storage.osdn.net
-          remote_user: ${{ secrets.OSDN_DEPLOY_USER }}
-          remote_key: ${{ secrets.OSDN_DEPLOY_KEY }}
+          remote_path: /root/openwrt_passwall/openwrt-passwall-build/
+          remote_host: hk.vm.cloudteam.top
+          remote_user: ${{ secrets.HK_DEPLOY_USER }}
+          remote_key_pass: ${{ secrets.HK_DEPLOY_KEY_PASS }}
