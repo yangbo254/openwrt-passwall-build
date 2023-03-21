@@ -17,17 +17,6 @@ jobs:
         sdk:
           - snapshot
           - openwrt-18.06
-        include:
-          - arch: arc_archs
-            sdk: openwrt-18.06
-          - arch: powerpc_8540
-            sdk: openwrt-18.06
-        exclude:
-          - arch: powerpc_8548
-            sdk: openwrt-18.06
-          # https://github.com/openwrt/packages/issues/19511
-          - arch: mipsel_24kc_24kf
-            sdk: snapshot
 
     steps:
       - name: Checkout
