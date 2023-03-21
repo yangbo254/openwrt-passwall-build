@@ -16,7 +16,7 @@ jobs:
           - x86_64
         sdk:
           - snapshot
-          - openwrt-22.03
+          - openwrt-18.06
         include:
           - arch: arc_archs
             sdk: openwrt-18.06
